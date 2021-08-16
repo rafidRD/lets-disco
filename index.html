@@ -1,12 +1,35 @@
-import './style.css'
-import * as THREE from 'three'
-import { OrbitControls } from 'three/examples/jsm/controls/OrbitControls.js'
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+    <title>Let's Disco</title>
+    <link rel="apple-touch-icon" sizes="180x180" href="https://1.bp.blogspot.com/-W57o9rvh1Ik/YRlbzb6IadI/AAAAAAAAaG8/5rVGyP36ACU5_bZlFE6rDEbrAq6S5AytQCLcBGAsYHQ/s180/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="https://1.bp.blogspot.com/-wkW3AbbkDp0/YRlb0Rqq4sI/AAAAAAAAaHQ/RCWkSivR_Zs9fCJ2P8BbSvD5f0Zx3QNnQCLcBGAsYHQ/s32/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="https://1.bp.blogspot.com/-eZmmbJjjvi8/YRlb0DwOMxI/AAAAAAAAaHI/B5ZDbY8CXsg1XqSy1cqb9nr4eSSlcCY5wCLcBGAsYHQ/s16/favicon-16x16.png">
+    <link rel="manifest" href="https://github.com/Rafid-009/portfolio/blob/main/3js-try1/site.webmanifest">
+    <link rel="stylesheet" type="text/css" href="src/css/style.css">
+    <link rel="preload" as="style" onload="this.rel='stylesheet'" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous" />
+    <link rel="stylesheet"  href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous" />
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+</head>
+<body>
+    <div id="home">
+        <h1>Let's Disco</h1>
+    </div>
+    <canvas class="webgl"></canvas>
+    <div class="cursor"><img src="src/images/cursor/cursor.cur"/></div>
+    <a href="#home"><i class="fas fa-chevron-up"></i>Get Back Up</a>
+    <h5>All rights reserved | LOL Just Kidding | Rafid Ahmed @2021</h5>
+
+<script src="src/js/three.js"></script>
+<script type="text/javascript">
 
 //Texture Loader Settings
 const textureLoader = new THREE.TextureLoader();
 
-const normalTexture = textureLoader.load('textures/NormalMap.png');
+const normalTexture = textureLoader.load('https://raw.githubusercontent.com/tiagoheras/feel-the-sphere/main/static/textures/NormalMap.png');
 
 
 // Canvas Settings
@@ -93,7 +116,7 @@ scene.add(camera)
 
 const renderer = new THREE.WebGLRenderer({
     canvas: canvas,
-    // alpha:true,
+    alpha:true,
 })
 renderer.setSize(sizes.width, sizes.height)
 renderer.setPixelRatio(Math.min(window.devicePixelRatio, 2))
@@ -155,3 +178,7 @@ document.addEventListener('mousemove',e => {
     cursor.setAttribute("style", "top: "+(e.pageY - 10)+"px; left: "+(e.pageX - 10)+"px;")
 })
 
+
+</script>
+</body>
+</html>
