@@ -8,7 +8,7 @@ This is my first time using [Three JS](https://threejs.org/). Thanks to designco
 
 ## Additional
 
-* Hosted on [GitHub-Pages](http://Rafid-009.github.io/lets-disco)
+* Hosted on [GitHub-Pages](http://rafidRD.github.io/lets-disco)
 * PWA Supported. (Think so)
 
 ### If you liked the project don't forget to drop a :star2:
